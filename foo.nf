@@ -6,14 +6,11 @@ params.fail = false
 
 log.info nfcoreHeader()
 
-cheers = Channel.from 'Bonjour'
 
 process sayHello {
-  input: 
-    val x from cheers
   script:
     """
-    echo '$x world!'
+    env | sort
     sleep $params.sleep
     exit ${params.fail ? 1 : 0}
     """
