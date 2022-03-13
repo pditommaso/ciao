@@ -3,14 +3,15 @@ echo true
 params.sleep = 0 
 params.monochrome_logs = false
 params.fail = false
+params.header = false
 
-log.info nfcoreHeader()
-
+if( params.header ) 
+  log.info nfcoreHeader()
 
 process sayHello {
   script:
     """
-    env | sort
+    echo "Hello world!"
     sleep $params.sleep
     exit ${params.fail ? 1 : 0}
     """
