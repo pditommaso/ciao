@@ -1,5 +1,5 @@
 #!/usr/bin/env nextflow
-echo true
+
 params.sleep = 0 
 params.monochrome_logs = false
 params.fail = false
