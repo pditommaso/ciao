@@ -17,6 +17,9 @@ process sayHello {
     """
 }
 
+workflow {
+  sayHello()
+}
 
 def nfcoreHeader() {
     // Log colors ANSI codes
